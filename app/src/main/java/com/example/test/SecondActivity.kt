@@ -9,7 +9,11 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
         val son = intent.getParcelableExtra<Son>("data")
-
-        println("xxxxxx")
+        println(son)
+        val fatherSon = intent.getParcelableExtra<Father>("data")
+        println(fatherSon)
+        //不能强转
+//        val sonFather = intent.getParcelableExtra<Son>("father")
+//        println(sonFather)
     }
 }

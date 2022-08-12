@@ -13,8 +13,10 @@ class MainActivity : AppCompatActivity() {
         start.setOnClickListener {
             val son = Son(12)
             son.name = "于黎阳"
+            val father = Father("father")
             startActivity(Intent(this@MainActivity, SecondActivity::class.java).apply {
                 putExtra("data", son)
+                putExtra("father", father)
             })
         }
     }

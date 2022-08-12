@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
 open class Father(
     var name: String? = ""
 ) : Parcelable {
-//    constructor(parcel: Parcel) : this(parcel.readString()) {
+    //    constructor(parcel: Parcel) : this(parcel.readString()) {
 //    }
 //
 //    override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -29,6 +29,9 @@ open class Father(
 //            return arrayOfNulls(size)
 //        }
 //    }
+    override fun toString(): String {
+        return "name $name"
+    }
 }
 
 @Parcelize
@@ -47,6 +50,9 @@ class Son(var age: Int) : Father() {
         }
     }
 
+    override fun toString(): String {
+        return "name $name age $age"
+    }
 //    constructor(parcel: Parcel) : this(parcel.readInt()) {
 //        name = parcel.readString().toString()
 //    }
